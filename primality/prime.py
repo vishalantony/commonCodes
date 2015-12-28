@@ -3,8 +3,15 @@
 import math, random
 
 def prime_det(num):	
-	if num <= 1 or num%2 == 0:
+	if num <= 1:
+		print "Not Prime"
+		return False
+	elif num == 2:
+		print "Prime"
+		return True
+	elif num%2 == 0:
 		print "Composite"
+		print 2, 'X', num/2, '=', num
 		return False
 	
 	i = 3
