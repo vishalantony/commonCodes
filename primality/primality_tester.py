@@ -1,10 +1,11 @@
 #! /usr/bin/python
 
-import sys, os, math, prime
+import sys, os, math, isprime
 
 #expecting number and accuracy(optional)
 if len(sys.argv) == 1:
-	print "Usage: <program name> <number> [<accuracy>]"
+	print "isprime: program to find whether the given number is prime or not."
+	print "Usage: isprime <number> [<accuracy>]"
 	sys.exit(1)
 
 
@@ -19,10 +20,12 @@ if num < 0:
 if len(sys.argv) > 2:
 	acc = float(sys.argv[2])
 
-if num > 10**20:	
+if num > 10**14:	
 	method = 'non-deterministic';
 
-if method == 'deterministic':
-	sys.exit(prime.prime_det(num))
+print "Using", method, "method to find primality..."
 
-sys.exit(prime.prime_nondet(num, acc))
+if method == 'deterministic':
+	sys.exit(isprime.prime_det(num))
+
+sys.exit(isprime.prime_nondet(num, acc))
