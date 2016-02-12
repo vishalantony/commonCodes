@@ -1,2 +1,2 @@
 # commonCodes
-My implementation of some functions used commonly.
+My implementation of some algorithms and data structures for academic purpose.
