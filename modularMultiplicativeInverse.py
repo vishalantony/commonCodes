@@ -22,7 +22,6 @@ def extEuc(a, mod):
 	return (y, x - y*(a/mod), g)
 
 def mmi(a, mod):
-	(a, mod) = (min(a,mod), max(a,mod))
 	(x, y, g) = extEuc(a, mod)
 	if g == 1:
 		if x >= 0:
