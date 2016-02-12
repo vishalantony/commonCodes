@@ -64,7 +64,7 @@ def prime_nondet(num, acc):
 		else:
 			print "Composite"
 			return False
-	print "Prime"
+	print "inconclusive"
 	return True
 		
 		
