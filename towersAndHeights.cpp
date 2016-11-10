@@ -106,9 +106,12 @@ int main(void) {
 		for(int j = 0; j < col; j++) {
 			find(i, j, row, col);
 			
-			if(final_length <= dp[i][j].length) {
-				final_length = dp[i][j].length;
+			if(final_length == dp[i][j].length) {
 				final_diff = max(dp[i][j].height - dp[i][j].lowest, final_diff);
+			}
+			else if(final_length < dp[i][j].length) {
+				final_length = dp[i][j].length;
+				final_diff = dp[i][j].height - dp[i][j].lowest;
 			}
 		}
 	}
